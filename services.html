@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amorganda Website - Web Development Courses</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://i.imgur.com/5TGS2Zh.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: black;
+      border-bottom: 2px solid blue;
+      padding: 10px 40px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .title-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .title-left img {
+      height: 30px;
+      width: auto;
+    }
+
+    .title-right {
+      display: flex;
+      gap: 0px;
+      flex-shrink: 1;
+      flex-wrap: nowrap;
+      margin-right: 50px; 
+    }
+
+    .title-right a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px;
+    }
+
+    .title-right a:hover {
+      background-color: navy;
+      border-radius: 5px;
+    }
+
+    .services-section {
+      text-align: center;
+      padding: 60px 20px;
+      margin-top: 80px;
+    }
+
+    .services-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      align-items: stretch;
+    }
+
+    .service-box {
+      background: #1e2a36;
+      color: white;
+      border-radius: 15px;
+      padding: 30px;
+      width: 350px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      border: 2px solid #005f99;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      min-height: 500px;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    .service-box:hover {
+      transform: translateY(-5px);
+      background: #2a3d56;
+    }
+
+    .service-box img {
+      width: 180px;
+      height: 180px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .service-box img:hover {
+      transform: scale(1.05);
+    }
+
+    .button1 {
+      background-color: #0066cc;
+      color: white;
+      border: 2px solid #005f99;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      margin-top: auto;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .button1:hover {
+      background-color: #004b7d;
+      border-color: #004b7d;
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 105, 204, 0.6);
+    }
+
+    .button1:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(0, 105, 204, 0.4);
+    }
+
+    .services-section h1 {
+      margin-bottom: 60px;
+      color: white;
+      font-size: 36px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px rgba(0, 105, 204, 0.8), 0 0 20px rgba(0, 105, 204, 0.6);
+      letter-spacing: 2px;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 10px rgba(0, 105, 204, 0.8), 0 0 20px rgba(0, 105, 204, 0.6);
+      }
+      100% {
+        text-shadow: 0 0 15px rgba(0, 105, 204, 1), 0 0 30px rgba(0, 105, 204, 0.9);
+      }
+    }
+    .glow-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 105, 204, 0.8), 0 0 20px rgba(0, 105, 204, 0.6);
+  letter-spacing: 2px;
+  animation: glow 1.5s infinite alternate;
+}
+    .course-section {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+      color: white;
+      border-top: 2px solid #005f99;
+      background: rgba(0, 0, 0, 0.85);
+      padding: 0;
+      margin: 0;
+    }
+
+    .course-image {
+      flex: 0 0 40%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: black;
+    }
+
+    .course-image img {
+      height: 80%;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .course-content {
+      flex: 1;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+    <div class="title">
+    <div class="title-left">
+      <a href="#"><img src="https://iili.io/3n7GriX.png" alt="Amorganda"></a>
+    </div>
+    <div class="title-right">
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <div class="services-section">
+    <h1>Master Web Development with Our Courses</h1>
+    <div class="services-container">
+      <div class="service-box">
+        <img src="https://codeandcore.sirv.com/media/2024/05/css.svg" alt="CSS3 Course">
+        <h3>CSS3</h3>
+        <p>Learn how to style websites with CSS3, including animations, transitions, and responsive design techniques.</p>
+        <a href="#css3" class="button1">Read More</a>
+      </div>
+
+      <div class="service-box">
+        <img src="https://codeandcore.sirv.com/media/2024/05/HTML5.svg" alt="HTML5 Course">
+        <h3>HTML5</h3>
+        <p>Master HTML5 to create structured, accessible, and SEO-friendly web pages from scratch.</p>
+        <a href="#html5" class="button1">Read More</a>
+      </div>
+
+      <div class="service-box">
+        <img src="https://codeandcore.sirv.com/media/2024/05/JavaScript.svg" alt="JavaScript Course">
+        <h3>JavaScript</h3>
+        <p>Discover how to make interactive web applications using JavaScript, including DOM manipulation and event handling.</p>
+        <a href="#javascript" class="button1">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CSS3 Section -->
+  <div id="css3" class="course-section">
+    <div class="course-image">
+      <img src="https://static.wixstatic.com/media/56ef5f_36430c0265044f939a4aceeda1fa2b4d~mv2.png" alt="CSS3 Large">
+    </div>
+    <div class="course-content">
+      <h2 class="glow-title">CSS3 Course</h2>
+      <h3>Take your web design skills to the next level! Master advanced CSS3 techniques, including Flexbox, Grid, transitions, and animations, to create stunning and fully responsive websites.<h3>
+    </div>
+  </div>
+
+  <!-- HTML5 Section -->
+  <div id="html5" class="course-section">
+    <div class="course-image">
+      <img src="https://static.wixstatic.com/media/56ef5f_c562c4d1dc1e416d95321e192923ca20~mv2.webp" alt="HTML5 Large">
+    </div>
+    <div class="course-content">
+      <h2 class="glow-title">HTML5 Course</h2>
+      <h3>Build a strong foundation in web development with HTML5! Learn how to structure content effectively, create accessible and SEO-friendly web pages, and leverage semantic elements for modern web design.<h3>
+    </div>
+  </div>
+
+  <!-- JavaScript Section -->
+  <div id="javascript" class="course-section">
+    <div class="course-image">
+      <img src="https://static.wixstatic.com/media/56ef5f_1a96a6beb9a94211a4df7b4e22acf6dc~mv2.webp" alt="JavaScript Large">
+    </div>
+    <div class="course-content">
+      <h2 class="glow-title">JavaScript Course</h2>
+      <h3>Unlock the full potential of JavaScript! Explore core concepts like ES6+, DOM manipulation, event handling, and APIs to develop interactive and dynamic web applications.<h3>
+    </div>
+  </div>
+
+</body>
+</html>

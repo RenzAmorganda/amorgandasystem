@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Amorganda Website - Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('https://i.imgur.com/5TGS2Zh.png'); 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .contact-container {
+      background: rgba(0, 0, 0, 0.85);
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 340px;
+      box-shadow: 0px 0px 15px rgba(0, 140, 255, 0.8);
+      border: 2px solid blue;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+
+    .contact-container img {
+      display: block;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      width: 140px;
+      height: 140px;
+      border: 3px solid white;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+    }
+
+    .glow-text {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #fff;
+      text-align: center;
+      text-shadow: 0 0 10px rgba(0, 140, 255, 0.9), 
+                   0 0 15px rgba(0, 140, 255, 0.8), 
+                   0 0 20px rgba(0, 140, 255, 1);
+    }
+
+    .contact-info {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      margin: 8px 0;
+      padding: 5px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .label-text {
+      font-weight: bold;
+      text-align: left;
+      flex: 1;
+    }
+
+    .value-text {
+      text-align: right;
+      flex: 1;
+      font-style: italic;
+    }
+
+    /* Fix for email breaking issue */
+    .info-row.email {
+  display: flex;  
+  flex-direction: column; 
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.email-text {
+  display: block;
+  text-align: left;
+  font-style: italic;
+  color: #bbb; /* Adjust for better readability */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin-top: 5px;
+}
+   .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: black;
+      border-bottom: 2px solid blue;
+      padding: 10px 40px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .title-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .title-left img {
+      height: 30px;
+      width: auto;
+    }
+
+    .title-right {
+      display: flex;
+      gap: 0px;
+      flex-shrink: 1;
+      flex-wrap: nowrap;
+      margin-right: 50px; 
+    }
+
+    .title-right a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px;
+    }
+
+    .title-right a:hover {
+      background-color: navy;
+      border-radius: 5px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 480px) {
+      .contact-container {
+        width: 90%;
+        max-width: 280px;
+        padding: 20px;
+      }
+
+      .contact-container img {
+        width: 120px;
+        height: 120px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+	  <div class="title">
+    <div class="title-left">
+      <a href="#"><img src="https://iili.io/3n7GriX.png" alt="Amorganda"></a>
+    </div>
+    <div class="title-right">
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <div class="contact-container">
+    <h2 class="glow-text">Let's Get in Touch</h2>
+    <img src="https://static.wixstatic.com/media/56ef5f_3008a5d2ea7240a6bc54752bd9b0de06~mv2.jpg/v1/crop/x_269,y_353,w_2988,h_2995/fill/w_171,h_171,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/56ef5f_3008a5d2ea7240a6bc54752bd9b0de06~mv2.jpg" alt="Avatar">
+    <div class="contact-info">
+      <div class="info-row"><span class="label-text">Name</span> <span class="value-text">Renz D. Amorganda</span></div>
+      <div class="info-row"><span class="label-text">Phone</span> <span class="value-text">09508578011</span></div>
+      <div class="info-row email">
+        <span class="label-text">Email</span>  
+        <span class="email-text">Renz.Amorganda@sccpag.edu.ph</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Amorganda Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('https://i.imgur.com/5TGS2Zh.png'); 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: black;
+      border-bottom: 2px solid blue;
+      padding: 10px 40px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .title-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .title-left img {
+      height: 30px;
+      width: auto;
+    }
+
+    .title-right {
+      display: flex;
+      gap: 0px;
+      flex-shrink: 1;
+      flex-wrap: nowrap;
+      margin-right: 50px; 
+    }
+
+    .title-right a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px;
+    }
+
+    .title-right a:hover {
+      background-color: navy;
+      border-radius: 5px;
+    }
+
+    .main-text {
+      position: absolute;
+      top: 25%;
+      left: 5%;
+      max-width: 50%;
+    }
+
+    .main-text h1 {
+      font-size: 65px;
+      color: white;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 
+                   0 0 10px rgba(255, 255, 255, 0.3);
+      font-weight: bold;
+      line-height: 1.2;
+      text-align: left;
+    }
+
+    .main-text p {
+      font-size: 20px;
+      color: #ccc;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .main-cta {
+      margin-top: 30px;
+    }
+
+    .main-cta h2 {
+      color: white;
+      font-size: 22px;
+      margin-bottom: 10px;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .cta-button:hover {
+      background-color: white;
+      color: black;
+      box-shadow: 0 0 20px cyan;
+    }
+
+    .login-container {
+      background-color: rgba(0, 0, 0, 0.9);
+      border-radius: 15px;
+      padding: 30px;
+      width: 320px;
+      position: absolute;
+      top: 50%;
+      right: 500px;
+      transform: translateY(-50%);
+      text-align: center;
+      box-shadow: 0 0 15px blue;
+      border: 2px solid blue;
+      transition: 0.3s;
+    }
+
+    .login-container:hover {
+      box-shadow: 0 0 25px #00f, 0 0 50px rgba(0, 0, 255, 0.6);
+    }
+
+    .login-container img {
+      display: block;
+      margin: 0 auto;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid blue;
+      box-shadow: 0 0 10px blue;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      color: white;
+      text-shadow: 0 0 5px blue;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: white;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: black;
+      color: white;
+      text-align: center;
+      border: 2px solid blue;
+      box-shadow: 0 0 5px blue;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      outline: none;
+      box-shadow: 0 0 10px cyan;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      background-color: blue;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+      box-shadow: 0 0 10px blue;
+    }
+
+    input[type="submit"]:hover {
+      background-color: navy;
+      box-shadow: 0 0 20px cyan;
+    }
+
+    @media (max-width: 1024px) {
+      .main-text {
+        max-width: 70%;
+      }
+
+      .main-text h1 {
+        font-size: 50px;
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      }
+
+      .main-text p {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main-text {
+        max-width: 80%;
+        left: 10%;
+      }
+
+      .main-text h1 {
+        font-size: 40px;
+        text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+      }
+
+      .main-text p {
+        font-size: 16px;
+      }
+
+      .login-container {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="title">
+    <div class="title-left">
+      <a href="#"><img src="https://iili.io/3n7GriX.png" alt="Amorganda"></a>
+    </div>
+    <div class="title-right">
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <div class="main-text">
+    <h1>TURN YOUR IDEAS INTO INDUSTRY-LEADING TECHNOLOGIES.</h1>
+    <p>Amorganda systems teaches you how to build scalable and reliable custom websites for businesses of all sizes and industries. We transform your ideas into top-performing digital products that your customers truly value.</p>
+    
+    <div class="main-cta">
+      <h2>Discover Our Services</h2>
+      <a href="services.php" class="cta-button">Learn more</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('loginForm')?.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      if (username === 'user' && password === 'password') {
+        document.querySelector('.main-text').style.visibility = 'visible';
+        document.querySelector('.title').style.display = 'block';
+        document.querySelector('.login-container').style.display = 'none';
+      } else {
+        alert('Incorrect username or password.');
+      }
+    });
+  </script>
+
+</body>
+</html>

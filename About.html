@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Amorganda Website - About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 80px 0 0 0; /* Prevent nav bar from overlapping */
+      height: 100vh;
+      background-image: url('https://i.imgur.com/5TGS2Zh.png'); 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .login-container {
+      background: rgba(0, 0, 0, 0.85);
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 320px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      border: 2px solid blue;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+
+    .login-container img {
+      display: block;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      border: 3px solid white;
+      box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6);
+    }
+
+    .glow-text {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #fff;
+      text-align: center;
+      text-shadow: 0 0 8px rgba(0, 140, 255, 0.8), 
+                   0 0 12px rgba(0, 140, 255, 0.6), 
+                   0 0 20px rgba(0, 140, 255, 0.8), 
+                   0 0 30px rgba(0, 140, 255, 1);
+    }
+
+    .login-info {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      margin: 8px 0;
+      padding: 5px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .label-text {
+      font-weight: bold;
+      text-align: left;
+      flex: 1;
+    }
+
+    .value-text {
+      text-align: right;
+      flex: 1;
+      font-style: italic;
+    }
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: black;
+      border-bottom: 2px solid blue;
+      padding: 10px 40px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .title-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .title-left img {
+      height: 30px;
+      width: auto;
+    }
+
+    .title-right {
+      display: flex;
+      gap: 0px;
+      flex-shrink: 1;
+      flex-wrap: nowrap;
+      margin-right: 50px;
+    }
+
+    .title-right a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px;
+    }
+
+    .title-right a:hover {
+      background-color: navy;
+      border-radius: 5px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 480px) {
+      .login-container {
+        width: 90%;
+        max-width: 280px;
+        padding: 20px;
+      }
+
+      .login-container img {
+        width: 120px;
+        height: 120px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+	  <div class="title">
+    <div class="title-left">
+      <a href="#"><img src="https://iili.io/3n7GriX.png" alt="Amorganda"></a>
+    </div>
+    <div class="title-right">
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="login-container">
+    <h2 class="glow-text">Turn Your Ideas Into Industry-leading Technologies</h2>
+    <img src="https://codeandcore.sirv.com/assets/images/cnc-logo.svg" alt="Avatar">
+    <div class="login-info">
+      <div class="info-row"><span class="label-text">Name</span> <span class="value-text">Renz D. Amorganda</span></div>
+      <div class="info-row"><span class="label-text">Course & Year</span> <span class="value-text">BSIT-1</span></div>
+      <div class="info-row"><span class="label-text">Age</span> <span class="value-text">18</span></div>
+    </div>
+  </div>
+
+</body>
+</html>
